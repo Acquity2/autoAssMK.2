@@ -8,6 +8,7 @@ function getInputItemList.main(side)
 	_table = _table.getAll()
 	local _itemList = {}
 	for k,v in pairs(_table) do
+		if v.label == nil then break end
 		local a = tonumber(k)	
 		local _key = a + 1
 		local _itemLabel = v.label
