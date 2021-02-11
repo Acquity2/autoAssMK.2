@@ -16,7 +16,7 @@ function getInputItemList.main(side)
 		_itemList[_key] = {}
 		_itemList[_key][1] = _itemLabel
 		_itemList[_key][2] = _amount
-		_itemList[n] = _key
+		_itemList.n = _key
 	end
 	return _itemList
 end
