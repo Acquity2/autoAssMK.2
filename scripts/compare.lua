@@ -17,21 +17,21 @@ local list1,list2 = {} --list1为读取闪存中list，list2为输入箱子中�
 function compare.listCompare(list1,list2)
 	local _leng1 = compare.table_leng(list1)
 	local _leng2 = compare.table_leng(list2)
-	compareResult = false
+	local _table = {}
+	local _result = false
 	if _leng1 ~= _leng2 then 
-		compareResult = false
+		_result = false
 		goto BRE
 	end
-	local _table = {}
 	for i = 1,_leng1,1 do
 		_table[i] = list1[i][1] == list2[i][1] and list1[i][2] == list2[i][2]
 	end
-	compareResult = true
+	_result = true
 	for i = 1,_leng1,1 do
-		compareResult = compareResult and _table[i]
+		_result = _result and _table[i]
 	end
 	::BRE::
-	return compareResult
+	return _result
 end
 
 function compare.main()
