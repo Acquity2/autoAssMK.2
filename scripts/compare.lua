@@ -5,6 +5,7 @@ local readFlash = require('readFlash')
 
 compare = {}
 
+--[[ 
 function compare.table_leng(t)
 	local leng=0
 	for k, v in pairs(t) do
@@ -12,14 +13,14 @@ function compare.table_leng(t)
 	end
 	return leng;
 end
+--]] 
+--获取string长度函数
 
-local list1,list2 = {} --list1为读取闪存中list，list2为输入箱子中物品列表
-function compare.listCompare(list1,list2)
-	local _leng1 = compare.table_leng(list1)
-	local _leng2 = compare.table_leng(list2)
+
+function compare.listCompare(list1,list2) --list1为读取闪存中list，list2为输入箱子中物品列表
 	local _table = {}
 	local _result = false
-	if _leng1 ~= _leng2 then 
+	if list1.n ~= list2.n then 
 		_result = false
 		goto BRE
 	end
