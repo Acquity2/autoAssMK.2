@@ -24,11 +24,11 @@ function compare.listCompare(list1,list2) --list1为读取闪存中list，list2�
 		_result = false
 		goto BRE
 	end
-	for i = 1,_leng1,1 do
+	for i = 1,list1.n,1 do
 		_table[i] = list1[i][1] == list2[i][1] and list1[i][2] == list2[i][2]
 	end
 	_result = true
-	for i = 1,_leng1,1 do
+	for i = 1,list1.n,1 do
 		_result = _result and _table[i]
 	end
 	::BRE::
