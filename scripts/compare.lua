@@ -29,10 +29,10 @@ function compare.listCompare(list1,list2)
 		end
 	end
 	return true
-	goto End
+	goto _end
 	::BRE::
 	return false
-	::End::
+	::_end::
 end
 
 function compare.main()
@@ -43,11 +43,11 @@ function compare.main()
 		local _inputList = readFlash.getInputItems(sides.down,i)
 		if compare.listCompare(_inputList,_itemList) then
 			return i
-			goto End1
+			goto _end1
 		end
 	end
 	return nil
-	::End1::
+	::_end1::
 end
 
 
