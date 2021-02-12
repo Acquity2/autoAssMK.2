@@ -20,7 +20,7 @@ function getTableDiff.main(_tb1,_tb2)
 		end
 		
 		if v ~= nil then
-			_tb3[k] = v
+			_tb3[v] = k
 		end
 	end
 	
