@@ -12,18 +12,10 @@ function getTableDiff.main(_tb1,_tb2)
 	
 	local _tb3 = {}
 	for k,v in pairs(_tb1) do
-		for k,vv in pairs(_tb2) do
-			if v == vv then 
-				v = nil
-				break
-			end
-		end
-		
-		if v ~= nil then
+		if v ~= _tb2[k] then
 			_tb3[v] = k
 		end
 	end
-	
 	table.sort(_tb3)
 	return _tb3
 end
