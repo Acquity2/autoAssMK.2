@@ -56,9 +56,10 @@ while true do
 		print('All address got!')
 		break
 	end
+	os.sleep(0.1)
 end	
 
-generateConfig(_tA[1],_tA[2],_tA[3],_tA[4],_mA[1],_mA[2],_mA[3],_mA[4])
+generateConfig(_tA[1],_tA[2],_tA[3],_tA[4],_mA[1],_mA[2],_mA[3],	_mA[4])
 
 
 
