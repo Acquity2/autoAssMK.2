@@ -37,6 +37,8 @@ i[1],i[2] = 1,1
 _numList[1] = countComponent()
 _componentList[1] = component.list()
 
+
+print('setup start,please place the transposer & adapter')
 while true do
 	local _tb = {}
 	_numList[2] = countComponent()
@@ -46,10 +48,12 @@ while true do
 		if _tb['transposer'] ~= nil then
 			_tA[i[1]] = _tb['transposer']
 			i[1] = i[1] + 1
+			print('Liquid transposer added')
 		end
 		if _tb['me_interface'] ~= nil then
 			_mA[i[2]] = _tb['me_interface']
 			i[2] = i[2] + 1
+			print('Liquid Setter added')
 		end
 	end
 	if i[1] == 5 and i[2] == 5 then 
