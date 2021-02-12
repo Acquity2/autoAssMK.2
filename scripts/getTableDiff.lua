@@ -20,7 +20,7 @@ function getTableDiff.main(_tb1,_tb2)
 		end
 		
 		if v ~= nil then
-			table.insert(_tb3,v)
+			table.insert(_tb3,k)
 		end
 	end
 	
