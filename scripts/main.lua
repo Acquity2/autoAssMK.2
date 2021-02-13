@@ -7,6 +7,7 @@ local getTableDiff = require('getTableDiff')
 local conf = require('conf')
 local readFlash = require('readFlash')
 local transferItem = require('transferItem')
+local fluid = require('fluid')
 
 
 main = {}
