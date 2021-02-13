@@ -1,6 +1,8 @@
 local component = require('component')
 local conf = require('conf')
+local sides = require('sides')
 local databaseAdr = component.database.address
+
 
 fluid = {}
 
@@ -24,8 +26,16 @@ function fluid.getDBNum(_label)
 end
 
 function fluid.setOutput(_label,_number)
-	local setter = component.proxy(conf.fluidSetter[_number])
+	local _Fsetter = component.proxy(conf.fluidSetter[_number])
 	local _dbNum = fluid.getDBNum(_label)
-	local _result = setter.setFluidInterfaceConfiguration(sides.up,databaseAdr,_dbNum)
+	local _result = _Fsetter.setFluidInterfaceConfiguration(sides.up,databaseAdr,_dbNum)
 	return _result
 end
+
+function fluid.transfer(_amount,_number)
+	local _Ftransposer = component.proxy(conf.fluidTransposer[_number])
+	local _result = _Ftransposer.transferFliud(sides.down,sides.up,_amount)
+	return _result
+end
+
+return fluid

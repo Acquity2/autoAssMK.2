@@ -46,8 +46,8 @@ function compare.main()
 			_result = i
 		end
 	end
+	print(getInputFluids(sides.down,_result))
 	return _result
 end
 
-
-	
+return compare

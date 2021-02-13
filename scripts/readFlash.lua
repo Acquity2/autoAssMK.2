@@ -15,6 +15,12 @@ function readFlash.getInputFluids(side,n)
 	return _inputFluids
 end
 
+function readFlash.getOutput(side,n)
+	local _table = component.inventory_controller.getStackInSlot(sides.down,n)
+	local _output = _table.output
+	return _output
+end
+
 function readFlash.count(side)
 	local _size = component.inventory_controller.getInventorySize(side)
 	_size = _size - 1
