@@ -52,12 +52,14 @@ while true do
 			i[1] = i[1] + 1
 			_componentList[1] = _componentList[2]
 			print('Liquid transposer added')
+			print(i[1])
 		end
 		if _tb['me_interface'] ~= nil then
 			_mA[i[2]] = _tb['me_interface']
 			i[2] = i[2] + 1
 			_componentList[1] = _componentList[2]
 			print('Liquid Setter added')
+			print(i[2])
 		end
 	end
 	if i[1] == 6 and i[2] == 5 then 
