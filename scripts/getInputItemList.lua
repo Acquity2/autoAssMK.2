@@ -6,7 +6,7 @@ getInputItemList = {}
 local _transposer = component.proxy(conf.transposer)
 
 function getInputItemList.main(side)
-	local _table = component.transposer.getAllStacks(side)
+	local _table = _transposer.getAllStacks(side)
 	_table = _table.getAll()
 	local _itemList = {n = nil}
 	for k,v in pairs(_table) do
