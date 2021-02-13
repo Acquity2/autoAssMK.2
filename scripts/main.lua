@@ -20,7 +20,7 @@ function main.start()
 	
 	if a == nil then
 		print('No matched Flash Drive,Exiting')
-		break
+		goto WEQR
 	else
 		local _text = readFlash.getOutput(sides.down,a)
 		print('Found matched Flash Drive NO.'..a)
@@ -48,7 +48,7 @@ function main.start()
 	end
 	if R == false then
 		print('Fluid Exam Failed')
-		break
+		goto WEQR
 	end	
 	print('Start Transfer Fluid')
 	
@@ -69,6 +69,9 @@ function main.start()
 	print('start Item Transfer')
 	transferItem.main()
 	print('Item Transfer Complete')
+	
+::WEQR::
+
 end
 	
 	
