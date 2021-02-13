@@ -34,7 +34,7 @@ end
 
 function fluid.transfer(_amount,_number)
 	local _Ftransposer = component.proxy(conf.fluidTransposer[_number])
-	local _result = _Ftransposer.transferFliud(sides.down,sides.up,_amount)
+	local _result = _Ftransposer.transferFluid(sides.down,sides.up,_amount)
 	return _result
 end
 
