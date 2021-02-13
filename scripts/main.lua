@@ -47,7 +47,7 @@ function main.start()
 		R = R and v
 	end
 	if R == false then
-		print(Fluid Exam Failed)
+		print('Fluid Exam Failed')
 		break
 	end	
 	print('Start Transfer Fluid')
