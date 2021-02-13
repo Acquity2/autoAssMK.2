@@ -3,11 +3,14 @@ local os = require('os')
 local component = require('component')
 
 while true do
-	local _table = component.me_controller.getItemsInNetwork()
-	if _table.n ~= 0 then
-		print('Item in InputBus,Terminated')
-	else
-		main.start()
+	local _table1 = component.me_controller.getItemsInNetwork()
+	local _table2 = getInputItemList.main(sides.up)
+	if _table2[1] ~= nil then
+		if _table1.n ~= 0 then
+			print('Item in InputBus,Terminated')
+		else
+			main.start()
+		end
 	end
 	os.sleep(0.5)
 end

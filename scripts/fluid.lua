@@ -2,7 +2,7 @@ local component = require('component')
 local conf = require('conf')
 local sides = require('sides')
 local databaseAdr = component.database.address
-
+local fluidDatabase = require('fluidDatabase')
 
 fluid = {}
 
@@ -12,6 +12,9 @@ function fluid.getDBNum(_label)
 		local _table = component.database.get(i)
 		if _table ~= nil then 
 			local _type = _table.label
+			if fluidDatabase[_type] ~= nil then
+				_type = fluidDatabase[_type]
+			end
 			local X = string.find(_type,_label)
 			if X ~= nil then
 				_result = i
