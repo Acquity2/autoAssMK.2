@@ -8,7 +8,7 @@ fluid = {}
 
 function fluid.getDBNum(_label)
 	local _result = nil
-	for i = 1,25,1 do
+	for i = 1,81,1 do
 		local _table = component.database.get(i)
 		if _table ~= nil then 
 			local _type = _table.label
