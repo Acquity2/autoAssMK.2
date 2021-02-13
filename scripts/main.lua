@@ -18,7 +18,7 @@ function main.start()
 	local R = true
 	local _result1 = true
 	
-	if a = nil then
+	if a == nil then
 		print('No matched Flash Drive,Exiting')
 		break
 	else
