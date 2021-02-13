@@ -16,16 +16,18 @@ function generateConfig(ta1,ta2,ta3,ta4,ma1,ma2,ma3,ma4)
 	local file = io.open('conf.lua','w')
 	file:write('conf = {}\n')
 	file:write('conf.fluidSetter,conf.fluidTransposer = {},{}\n')
-	file:write('	--流体接口下适配器uuid\n')
+	file:write('	--物品转运器uuid\n')
+	file:write('conf.transposer = '.."'"..ta1.."'"..'\n')	
+	file:write('	--流体接口uuid\n')
 	file:write('conf.fluidSetter[1] = '.."'"..ma1.."'"..'\n')
 	file:write('conf.fluidSetter[2] = '.."'"..ma2.."'"..'\n')
 	file:write('conf.fluidSetter[3] = '.."'"..ma3.."'"..'\n')
 	file:write('conf.fluidSetter[4] = '.."'"..ma4.."'"..'\n\n')
 	file:write('	--流体用转运器uuid\n')
-	file:write('conf.fluidTransposer[1] = '.."'"..ta1.."'"..'\n')
-	file:write('conf.fluidTransposer[2] = '.."'"..ta2.."'"..'\n')
-	file:write('conf.fluidTransposer[3] = '.."'"..ta3.."'"..'\n')
-	file:write('conf.fluidTransposer[4] = '.."'"..ta4.."'"..'\n\n')	
+	file:write('conf.fluidTransposer[1] = '.."'"..ta2.."'"..'\n')
+	file:write('conf.fluidTransposer[2] = '.."'"..ta3.."'"..'\n')
+	file:write('conf.fluidTransposer[3] = '.."'"..ta4.."'"..'\n')
+	file:write('conf.fluidTransposer[4] = '.."'"..ta5.."'"..'\n\n')	
 	file:write('return conf')
 	file:close()
 	return
@@ -58,7 +60,7 @@ while true do
 			print('Liquid Setter added')
 		end
 	end
-	if i[1] == 5 and i[2] == 5 then 
+	if i[1] == 6 and i[2] == 5 then 
 		print('All address got!')
 		break
 	end

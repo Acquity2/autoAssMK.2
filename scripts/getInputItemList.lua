@@ -1,7 +1,9 @@
 local component = require('component')
 local sides = require('sides')
-
+local conf = require('conf')
 getInputItemList = {}
+
+local _transposer = component.proxy(conf.transposer)
 
 function getInputItemList.main(side)
 	local _table = component.transposer.getAllStacks(side)
