@@ -52,7 +52,6 @@ function main.start()
 		goto WEQR
 	end	
 	print('Start Transfer Fluid')
-	os.sleep(0.5)
 	
 	for k,v in pairs(_fluidTable) do 
 		fluid.transfer(v[2],k)
