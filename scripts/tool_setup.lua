@@ -12,7 +12,7 @@ function countComponent()
 	return _num
 end
 
-function generateConfig(ta1,ta2,ta3,ta4,ma1,ma2,ma3,ma4)
+function generateConfig(ta1,ta2,ta3,ta4,ta5,ma1,ma2,ma3,ma4)
 	local file = io.open('conf.lua','w')
 	file:write('conf = {}\n')
 	file:write('conf.fluidSetter,conf.fluidTransposer = {},{}\n')
@@ -69,7 +69,7 @@ while true do
 	os.sleep(0.1)
 end	
 
-generateConfig(_tA[1],_tA[2],_tA[3],_tA[4],_mA[1],_mA[2],_mA[3],	_mA[4])
+generateConfig(_tA[1],_tA[2],_tA[3],_tA[4],_tA[5],_mA[1],_mA[2],_mA[3],	_mA[4])
 
 
 
