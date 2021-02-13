@@ -19,7 +19,7 @@ end
 
 function compare.item(item1,item2)
  local _result = false
-	if chipDatabase.item2[1] == nil then 
+	if chipDatabase.item2 == nil then 
 		if item1 == item2 then 
 			_result = true
 		else
