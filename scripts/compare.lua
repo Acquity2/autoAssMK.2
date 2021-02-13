@@ -26,7 +26,7 @@ function compare.item(item1,item2)
 			_result = false
 		end
 	else
-		if chipDatabase.item1 == chipDatabase.item2 then
+		if chipDatabase[item1] == chipDatabase[item2] then
 			_result = true
 		else
 			_result = false
