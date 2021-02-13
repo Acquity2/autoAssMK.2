@@ -2,6 +2,7 @@ local component = require('component')
 local sides = require('sides')
 local getInputItemList = require('getInputItemList')
 local readFlash = require('readFlash')
+local chipDatabase = require('chipDatabase')
 
 compare = {}
 
@@ -16,6 +17,24 @@ end
 --]] 
 --获取string长度函数
 
+function compare.item(item1,item2)
+ local _result = false
+	if chipDatabase.item2 == nil then 
+		if item1 == item2 then 
+			_result = true
+		else
+			_result = false
+		end
+	else
+		if chipDatabase.item1 == chipDatabase.item2 then
+			_result = true
+		else
+			_result = false
+		end
+	end
+	return _result
+end
+
 
 function compare.listCompare(list1,list2) --list1为读取闪存中list，list2为输入箱子中物品列表
 	local _table = {}
@@ -25,7 +44,7 @@ function compare.listCompare(list1,list2) --list1为读取闪存中list，list2�
 		goto BRE
 	end
 	for i = 1,list1.n,1 do
-		_table[i] = list1[i][1] == list2[i][1] and list1[i][2] == list2[i][2]
+		_table[i] = compare.item(list1[i][1],list2[i][2]) and list1[i][2] == list2[i][2]
 	end
 	_result = true
 	for i = 1,list1.n,1 do
