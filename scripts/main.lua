@@ -74,6 +74,8 @@ function main.start()
 ::WEQR::
 
 end
+
+return main
 	
 	
 	
