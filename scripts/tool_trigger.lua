@@ -1,5 +1,6 @@
 local main = require('main')
 local os = require('os')
+local component = require('component')
 
 while true do
 	local _table = component.me_controller.getItemsInNetwork()
