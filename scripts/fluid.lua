@@ -41,8 +41,8 @@ end
 function fluid.Info(_number)
 	local _Ftransposer = component.proxy(conf.fluidTransposer[_number])
 	local _table = _Ftransposer.getFluidInTank(sides.down)
-	local _amount = _table.amount
-	local _label = _table.label
+	local _amount = _table[1].amount
+	local _label = _table[1].label
 	return _amount,_label
 	end
 	
