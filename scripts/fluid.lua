@@ -38,4 +38,13 @@ function fluid.transfer(_amount,_number)
 	return _result
 end
 
+function fluid.getFluidInfo(_number)
+	local _Ftransposer = component.proxy(conf.fluidTransposer[_number])
+	local _table = _Ftransposer.getFluidInTank(sides.down)
+	local _amount = _table.amount
+	local _label = _table.label
+	return _amount,_label
+	end
+	
+	
 return fluid
