@@ -12,6 +12,6 @@ for k,v in pairs(fluidDatabase)do
 	fluidDatabaseMetaTable[v] = k
 end
 
-fluidDatabase = setmetatable(fluidDatabase,fluidDatabaseMetaTable)
+fluidDatabase = setmetatable(fluidDatabase,__index = fluidDatabaseMetaTable)
 
 return fluidDatabase
