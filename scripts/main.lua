@@ -68,7 +68,9 @@ function main.start()
 	--]]
 	
 	print('start Item Transfer')
-	transferItem.main()
+	local _table = readFlash.getInputItems(sides.down,a)
+	print('Slots:'.._table.n)
+	transferItem.main(_table.n)
 	print('Item Transfer Complete')
 	
 ::WEQR::

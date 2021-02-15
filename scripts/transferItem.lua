@@ -5,8 +5,8 @@ local _transposer = component.proxy(conf.transposer)
 
 transferItem = {}
 
-function transferItem.main()
-	for i = 1,16,1 do
+function transferItem.main(_num)
+	for i = 1,_num,1 do
 		_transposer.transferItem(sides.up,sides.down,64,i,1)
 	end
 end
