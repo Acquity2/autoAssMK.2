@@ -7,9 +7,9 @@ local compare = require('compare')
 local _round = 1
 
 function pulse(_sides)
-	component.redstone.setoutput(_sides,15)
+	component.redstone.setOutput(_sides,15)
 	os.sleep(0.1)
-	component.redstone.setoutput(_sides,0)
+	component.redstone.setOutput(_sides,0)
 end
 
 function trigger()
@@ -30,7 +30,6 @@ function trigger()
 		print('Detected Rocket Plate Recipe!!')
 		os.sleep(0.5)
 	end
-	
 	_round = _round + 1
 end
 
