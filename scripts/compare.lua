@@ -6,6 +6,15 @@ local chipDatabase = require('chipDatabase')
 
 compare = {}
 
+compare.HDTlib = {}
+compare.HDTlib['Heavy-Duty Plate'] = 3
+compare.HDTlib['Heavy Duty Plate Tier 4'] = 4
+compare.HDTlib['Heavy Duty Plate Tier 5'] = 5
+compare.HDTlib['Heavy Duty Plate Tier 6'] = 6
+compare.HDTlib['Heavy Duty Plate Tier 7'] = 7
+compare.HDTlib['Heavy Duty Plate Tier 8'] = 8
+
+
 --[[ 
 function compare.table_leng(t)
 	local leng=0
@@ -54,9 +63,20 @@ function compare.listCompare(list1,list2) --list1为读取闪存中list，list2�
 	return _result
 end
 
+function compare.HDT(_List)
+	if compare.HDTlib[_List[1][1]] ~= nil then
+		_List[4] = _List[3]
+		_List[2][2] = _List[2][2] / 2
+		_List[3] = _List[2]
+		_List.n = _List.n + 1
+	end
+	return _List
+end
+
 function compare.main()
 	local _num = readFlash.count(sides.down)
 	local _itemList = getInputItemList.main(sides.up)
+	_itemList = compare.HDT(_itemList)
 	local _inputList = {}
 	local _result = nil
 	for i = 1,_num,1 do

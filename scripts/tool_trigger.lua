@@ -3,7 +3,14 @@ local os = require('os')
 local component = require('component')
 local sides = require('sides')
 local event = require('event')
+local compare = require('compare')
 local _round = 1
+
+function pulse(_sides)
+	component.redstone.setoutput(_sides,15)
+	os.sleep(0.1)
+	component.redstone.setoutput(_sides,0)
+end
 
 function trigger()
 	os.execute('cls')
@@ -18,6 +25,7 @@ function trigger()
 			main.start()
 		end
 	end
+	if compare.HDTlib[_table1[1].label] ~= nil then pulse(sides.south) end
 	_round = _round + 1
 end
 
