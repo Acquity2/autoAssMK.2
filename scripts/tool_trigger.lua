@@ -25,9 +25,14 @@ function trigger()
 			main.start()
 		end
 	end
-	if compare.HDTlib[_table1[1].label] ~= nil then pulse(sides.south) end
+	if compare.HDTlib[_table1[1].label] ~= nil then 
+		pulse(sides.south)
+		print('Detected Rocket Plate Recipe!!')
+		os.sleep(0.5)
+	end
+	
 	_round = _round + 1
 end
 
 os.execute('cls')
-event.timer(2,trigger,math.huge)
+event.timer(2.5,trigger,math.huge)

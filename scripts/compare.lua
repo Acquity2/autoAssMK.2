@@ -76,7 +76,7 @@ end
 function compare.main()
 	local _num = readFlash.count(sides.down)
 	local _itemList = getInputItemList.main(sides.up)
-	_itemList = compare.HDT(_itemList)
+	if _itemList[1] ~= nil then _itemList = compare.HDT(_itemList) end
 	local _inputList = {}
 	local _result = nil
 	for i = 1,_num,1 do
