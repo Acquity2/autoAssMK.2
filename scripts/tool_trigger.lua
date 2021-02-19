@@ -25,10 +25,12 @@ function trigger()
 			main.start()
 		end
 	end
-	if compare.HDTlib[_table1[1].label] ~= nil then 
-		pulse(sides.south)
-		print('Detected Rocket Plate Recipe!!')
-		os.sleep(0.5)
+	for i = 1,3,1 do
+		if compare.HDTlib[_table1[i].label] ~= nil then 
+			pulse(sides.south)
+			print('Detected Rocket Plate Recipe!!')
+			os.sleep(0.5)
+		end
 	end
 	_round = _round + 1
 end
