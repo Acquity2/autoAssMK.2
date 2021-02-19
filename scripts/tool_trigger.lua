@@ -18,11 +18,13 @@ function trigger()
 	local _table1 = component.me_controller.getItemsInNetwork()
 	local _table2 = getInputItemList.main(sides.up)
 	if _table2[1] ~= nil then
+		component.redstone.setOutput(sides.down,15)
 		if _table1.n ~= 0 then
 			print('Item in InputBus,Terminated')
 			os.sleep(0.5)
 		else
 			main.start()
+			os.sleep(0.5)
 		end
 	end
 	if _table1[1] ~= nil then
@@ -34,8 +36,11 @@ function trigger()
 			end
 		end
 	end
+	if _table2[1] == nil and _table1[1] == nil then
+		component.redstone.setOutput(sides.down,0)
+	end
 	_round = _round + 1
 end
 
 os.execute('cls')
-event.timer(2.5,trigger,math.huge)
+event.timer(2,trigger,math.huge)
