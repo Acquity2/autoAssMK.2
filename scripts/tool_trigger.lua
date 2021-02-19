@@ -28,6 +28,7 @@ function trigger()
 		end
 	end
 	if _table1[1] ~= nil then
+		component.redstone.setOutput(sides.down,15)
 		for i = 1,3,1 do
 			if compare.HDTlib[_table1[i].label] ~= nil then 
 				pulse(sides.south)
