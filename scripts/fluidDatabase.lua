@@ -8,7 +8,7 @@ fluidDatabase['fluid.lubricant'] = 'gt.metaitem.01.30724.name'
 fluidDatabase['fluid.molten.styrenebutadienerubber'] = 'gt.metaitem.99.635.name'
 fluidDatabase['IC2 Coolant'] = 'Coolant Cell'
 fluidDatabase['Hydrogen Gas'] = 'gt.metaitem.01.30001.name'
-fluidDatabase['UU-Matter'] = 'UuMatter Cell'
+fluidDatabase['UuMatter Cell'] = 'UU-Matter'
 fluidDatabase['fluid.growthmediumsterilized'] = 'gt.metaitem.01.30609.name'
 
 for k,v in pairs(fluidDatabase)do
