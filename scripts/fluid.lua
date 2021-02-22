@@ -15,7 +15,7 @@ function fluid.getDBNum(_label)
 			if fluidDatabase[_type] ~= nil then
 				_type = fluidDatabase[_type]
 			end
-			local X = string.find(_type,_label)
+			local X = string.find(_type,_label,1,true)
 			if X ~= nil then
 				_result = i
 				break
