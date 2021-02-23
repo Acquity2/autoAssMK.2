@@ -69,7 +69,7 @@ function main.start()
 	
 	print('start Item Transfer')
 	local _table = readFlash.getInputItems(sides.down,a)
-	if compare.HDT(_table[1][1]) ~= nil then _table.n = _table.n - 1
+	if compare.HDT(_table[1][1]) ~= nil then _table.n = _table.n - 1 end
 	print('Slots:'.._table.n)
 	transferItem.main(_table.n)
 	print('Item Transfer Complete')
