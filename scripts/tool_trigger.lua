@@ -26,6 +26,7 @@ function trigger()
 			pulse(sides.north)
 		end
 	end
+	_table1 = component.me_controller.getItemsInNetwork()
 	if _table1[1] ~= nil then
 		component.redstone.setOutput(sides.down,15)
 		for i = 1,3,1 do
