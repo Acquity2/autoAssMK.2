@@ -38,7 +38,7 @@ function main.start()
 	print('Start Exam Fluid')
 	for k,v in pairs(_fluidTable) do
 		local _existAmount ,_existType = fluid.Info(sides.down,k)
-		if _existType == v[1] and _existAmount > v[2] then
+		if _existType == v[1] and _existAmount >= v[2] then
 			_result[k] = true
 		else
 			_result[k] = false
